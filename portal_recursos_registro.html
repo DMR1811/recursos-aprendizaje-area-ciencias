@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Recursos de aprendizaje · Área</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+:root{--vino:#5A2346;--morado:#76558F;--lila:#E8DFF0;--crema:#FBF7F1;--arena:#E9DED1;--coral:#D97865;--texto:#29232B;--gris:#706872;--borde:#DED5DE}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:"Ancizar Sans",sans-serif;background:var(--crema);color:var(--texto);line-height:1.6}a{text-decoration:none;color:inherit}
+.topbar{background:var(--vino);color:white;padding:15px 6%;display:flex;justify-content:space-between;font-weight:700}
+.hero{min-height:70vh;padding:80px 6%;display:flex;align-items:center;background:radial-gradient(circle at 85% 20%,rgba(217,120,101,.28),transparent 24%),radial-gradient(circle at 15% 80%,rgba(118,85,143,.18),transparent 25%),var(--crema)}
+.wrap{max-width:1180px;width:100%;margin:auto}.eyebrow{display:inline-block;background:var(--lila);color:var(--vino);padding:7px 14px;border-radius:30px;font-weight:800;margin-bottom:20px}
+h1{font-size:clamp(3rem,7vw,6.2rem);line-height:.92;letter-spacing:-2px;color:var(--vino);max-width:900px;margin-bottom:25px}.lead{max-width:720px;font-size:1.2rem;color:var(--gris);margin-bottom:28px}
+.auth{max-width:560px;background:white;border:1px solid var(--borde);border-radius:18px;padding:25px;box-shadow:0 15px 35px rgba(90,35,70,.1)}.auth h2{color:var(--vino);font-size:1.55rem}.auth p{color:var(--gris);margin:5px 0 18px}#googleButton{min-height:44px}#status{margin-top:12px;font-size:.92rem;font-weight:700;color:var(--gris)}.error{color:#A23B35!important}.ok{color:#3E7356!important}
+#portal{display:none;max-width:1180px;margin:auto;padding:70px 6% 90px}.head{margin-bottom:28px}.head h2{font-size:2.3rem;color:var(--vino)}.head p{color:var(--gris)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:white;border:1px solid var(--borde);border-radius:18px;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(90,35,70,.12)}.band{height:9px;background:var(--coral)}.card:nth-child(2) .band{background:var(--morado)}.card:nth-child(3) .band{background:var(--vino)}.body{padding:27px}.num{font-size:.82rem;color:var(--gris);font-weight:800;letter-spacing:1px}.card h3{font-size:1.6rem;color:var(--vino);margin:8px 0}.card p{color:var(--gris);min-height:78px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0}.tag{background:var(--lila);color:var(--vino);padding:5px 10px;border-radius:20px;font-size:.82rem;font-weight:700}.open{display:flex;justify-content:space-between;background:var(--vino);color:white;padding:12px 15px;border-radius:9px;font-weight:800}.session{margin-top:30px;padding:16px;background:var(--arena);border-radius:12px;color:var(--vino);font-weight:700}
+footer{background:var(--vino);color:white;text-align:center;padding:30px 6%}@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.grid{grid-template-columns:1fr}h1{letter-spacing:-1px}}
+</style>
+</head>
+<body>
+<nav class="topbar"><span>RECURSOS · ÁREA</span><span>Acceso institucional</span></nav>
+<header class="hero" id="acceso"><div class="wrap">
+<span class="eyebrow">Portal de recursos de aprendizaje</span>
+<h1>Aprender también es explorar.</h1>
+<p class="lead">Accede a los recursos digitales elaborados por el área. Primero debes ingresar con tu cuenta institucional.</p>
+<div class="auth">
+<h2>Ingresa con tu cuenta UNAL</h2>
+<p>Solo se admiten cuentas institucionales <strong>@unal.edu.co</strong>.</p>
+<div id="googleButton"></div><div id="status">Esperando autenticación…</div>
+</div></div></header>
+
+<section id="portal"><div class="head"><h2>Recursos disponibles</h2><p>El acceso se habilita después de validar tu cuenta institucional.</p></div>
+<div class="grid">
+<article class="card"><div class="band"></div><div class="body"><span class="num">01 · SIMULACIÓN</span><h3>Chemical Chaos</h3><p>Recurso interactivo para explorar un sistema químico mediante una experiencia de simulación.</p><div class="tags"><span class="tag">Interactivo</span><span class="tag">Simulación</span></div><a class="open" data-resource="Chemical Chaos" href="https://www.astrocade.com/games/chemical-chaos/01M1F98WM6VCCAF5GVDVX89D0D" target="_blank" rel="noopener">Abrir recurso <span>↗</span></a></div></article>
+<article class="card"><div class="band"></div><div class="body"><span class="num">02 · SITIO WEB</span><h3>Matemáticas Especiales II</h3><p>Ruta de aprendizaje con contenidos, visualizaciones, laboratorios y ejercicios de análisis complejo.</p><div class="tags"><span class="tag">Web educativa</span><span class="tag">Matemáticas</span></div><a class="open" data-resource="Matemáticas Especiales II" href="https://dmr1811.github.io/matematicas-especiales-ii/index.html" target="_blank" rel="noopener">Abrir recurso <span>↗</span></a></div></article>
+<article class="card"><div class="band"></div><div class="body"><span class="num">03 · NOTEBOOK</span><h3>Google Colab</h3><p>Notebook para trabajar de manera interactiva con código, cálculos y actividades computacionales.</p><div class="tags"><span class="tag">Computacional</span><span class="tag">Python</span></div><a class="open" data-resource="Google Colab" href="https://colab.research.google.com/drive/1DQYiysGucNVKg9DKVlW088_NzDaP0EWC" target="_blank" rel="noopener">Abrir recurso <span>↗</span></a></div></article>
+</div>
+<div class="session" id="sessionInfo"></div></section>
+<footer>Recursos de aprendizaje · Área</footer>
+
+<script>
+const GOOGLE_CLIENT_ID="REEMPLAZAR_CLIENT_ID.apps.googleusercontent.com";
+const LOG_ENDPOINT=""; // URL de tu Google Apps Script Web App
+
+function setStatus(t,c=""){const e=document.getElementById("status");e.textContent=t;e.className=c}
+function decodeJwt(t){const p=t.split(".")[1].replace(/-/g,"+").replace(/_/g,"/");return JSON.parse(decodeURIComponent(atob(p).split("").map(c=>"%"+("00"+c.charCodeAt(0).toString(16)).slice(-2)).join("")))}
+function handleCredential(r){
+ try{
+  const p=decodeJwt(r.credential),email=(p.email||"").toLowerCase(),hd=(p.hd||"").toLowerCase();
+  if(hd!=="unal.edu.co"||!email.endsWith("@unal.edu.co")||p.email_verified!==true){setStatus("Acceso denegado. Usa una cuenta institucional @unal.edu.co.","error");return}
+  sessionStorage.setItem("unal_email",email);sessionStorage.setItem("unal_sub",p.sub);sessionStorage.setItem("google_credential",r.credential);
+  document.getElementById("acceso").style.display="none";document.getElementById("portal").style.display="block";
+  document.getElementById("sessionInfo").textContent="Sesión institucional: "+email;setStatus("Acceso autorizado.","ok");
+  if(LOG_ENDPOINT) fetch(LOG_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams({action:"login",credential:r.credential})}).catch(()=>{});
+ }catch(e){setStatus("No fue posible validar la cuenta.","error")}
+}
+window.onload=()=>{
+ if(GOOGLE_CLIENT_ID.startsWith("REEMPLAZAR_")){setStatus("Falta configurar el Client ID de Google.","error");return}
+ google.accounts.id.initialize({client_id:GOOGLE_CLIENT_ID,callback:handleCredential,hd:"unal.edu.co",ux_mode:"popup"});
+ google.accounts.id.renderButton(document.getElementById("googleButton"),{theme:"outline",size:"large",text:"continue_with",shape:"rectangular",width:330});
+};
+document.addEventListener("click",e=>{
+ const a=e.target.closest("[data-resource]");if(!a||!LOG_ENDPOINT)return;
+ fetch(LOG_ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams({action:"resource",credential:sessionStorage.getItem("google_credential")||"",resource:a.dataset.resource})}).catch(()=>{});
+});
+</script>
+</body></html>
