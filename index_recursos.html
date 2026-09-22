@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursos de aprendizaje · Área</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --vino:#5A2346;
+    --morado:#76558F;
+    --lila:#E8DFF0;
+    --crema:#FBF7F1;
+    --arena:#E9DED1;
+    --coral:#D97865;
+    --texto:#29232B;
+    --gris:#706872;
+    --blanco:#FFFFFF;
+    --borde:#DED5DE;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+    font-family:"Ancizar Sans",sans-serif;
+    color:var(--texto);
+    background:var(--crema);
+    line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit}
+
+.topbar{
+    background:var(--vino);
+    color:#fff;
+    padding:14px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    font-size:1.15rem;
+    font-weight:800;
+    letter-spacing:.3px;
+}
+
+.top-link{
+    border:1px solid rgba(255,255,255,.45);
+    padding:8px 15px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.hero{
+    padding:85px 6% 75px;
+    background:
+        radial-gradient(circle at 82% 22%, rgba(217,120,101,.28), transparent 23%),
+        radial-gradient(circle at 15% 80%, rgba(118,85,143,.20), transparent 25%),
+        var(--crema);
+}
+
+.hero-inner{
+    max-width:1180px;
+    margin:auto;
+}
+
+.eyebrow{
+    display:inline-block;
+    color:var(--vino);
+    background:var(--lila);
+    padding:7px 14px;
+    border-radius:30px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+h1{
+    max-width:900px;
+    font-size:clamp(3rem,7vw,6.5rem);
+    line-height:.92;
+    letter-spacing:-2px;
+    color:var(--vino);
+    margin-bottom:28px;
+}
+
+.hero-text{
+    max-width:720px;
+    font-size:1.25rem;
+    color:var(--gris);
+}
+
+.hero-actions{
+    margin-top:30px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.primary{
+    background:var(--coral);
+    color:#fff;
+    padding:13px 21px;
+    border-radius:9px;
+    font-weight:800;
+}
+
+.secondary{
+    border:1px solid var(--vino);
+    color:var(--vino);
+    padding:13px 21px;
+    border-radius:9px;
+    font-weight:700;
+}
+
+main{
+    max-width:1180px;
+    margin:auto;
+    padding:65px 6% 90px;
+}
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:25px;
+    margin-bottom:28px;
+}
+
+.section-head h2{
+    color:var(--vino);
+    font-size:2.2rem;
+    line-height:1.1;
+}
+
+.section-head p{
+    max-width:600px;
+    color:var(--gris);
+}
+
+.resources{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.resource{
+    position:relative;
+    background:var(--blanco);
+    border:1px solid var(--borde);
+    border-radius:18px;
+    overflow:hidden;
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.resource:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(90,35,70,.12);
+}
+
+.resource-band{
+    height:9px;
+    background:var(--coral);
+}
+
+.resource:nth-child(2) .resource-band{background:var(--morado)}
+.resource:nth-child(3) .resource-band{background:var(--vino)}
+
+.resource-body{
+    padding:28px;
+}
+
+.number{
+    font-size:.85rem;
+    color:var(--gris);
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.resource h3{
+    color:var(--vino);
+    font-size:1.65rem;
+    margin:9px 0 10px;
+}
+
+.resource p{
+    color:var(--gris);
+    min-height:78px;
+}
+
+.resource-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin:20px 0;
+}
+
+.tag{
+    background:var(--lila);
+    color:var(--vino);
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:.82rem;
+    font-weight:700;
+}
+
+.open{
+    display:inline-flex;
+    width:100%;
+    justify-content:space-between;
+    align-items:center;
+    background:var(--vino);
+    color:#fff;
+    padding:12px 15px;
+    border-radius:9px;
+    font-weight:800;
+}
+
+.info{
+    margin-top:55px;
+    background:var(--arena);
+    border-radius:20px;
+    padding:32px;
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:35px;
+}
+
+.info h2{
+    color:var(--vino);
+    font-size:2rem;
+    line-height:1.1;
+}
+
+.info p{
+    color:var(--gris);
+}
+
+.login-box{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    border:1px solid var(--borde);
+}
+
+.login-box h3{
+    color:var(--vino);
+    margin-bottom:8px;
+}
+
+.login-box p{
+    font-size:.95rem;
+    margin-bottom:17px;
+}
+
+.email-row{
+    display:flex;
+    gap:10px;
+}
+
+.email-row input{
+    flex:1;
+    min-width:0;
+    border:1px solid var(--borde);
+    border-radius:8px;
+    padding:12px;
+    font:inherit;
+}
+
+.email-row button{
+    border:0;
+    border-radius:8px;
+    background:var(--coral);
+    color:#fff;
+    padding:12px 18px;
+    font:inherit;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.notice{
+    margin-top:12px;
+    font-size:.82rem;
+    color:var(--gris);
+}
+
+footer{
+    background:var(--vino);
+    color:#fff;
+    padding:35px 6%;
+}
+
+.footer-inner{
+    max-width:1180px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+}
+
+footer p{opacity:.82}
+
+@media(max-width:900px){
+    .resources{grid-template-columns:1fr 1fr}
+    .info{grid-template-columns:1fr}
+}
+
+@media(max-width:650px){
+    .topbar,.section-head,.footer-inner{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    h1{letter-spacing:-1px}
+
+    .resources{grid-template-columns:1fr}
+
+    .email-row{flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="topbar">
+    <a class="logo" href="index.html">RECURSOS · ÁREA</a>
+    <a class="top-link" href="#recursos">Explorar recursos ↓</a>
+</nav>
+
+<header class="hero">
+    <div class="hero-inner">
+        <span class="eyebrow">Recursos de aprendizaje</span>
+
+        <h1>Aprender también es explorar.</h1>
+
+        <p class="hero-text">
+            Un espacio para reunir los recursos digitales elaborados por el área:
+            simulaciones, páginas interactivas, notebooks y otras herramientas
+            para acompañar el aprendizaje.
+        </p>
+
+        <div class="hero-actions">
+            <a class="primary" href="#recursos">Ver recursos</a>
+            <a class="secondary" href="#registro">Registro institucional</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section id="recursos">
+        <div class="section-head">
+            <div>
+                <h2>Recursos disponibles</h2>
+            </div>
+            <p>
+                Selecciona un recurso para acceder directamente a la herramienta
+                correspondiente.
+            </p>
+        </div>
+
+        <div class="resources">
+
+            <article class="resource">
+                <div class="resource-band"></div>
+                <div class="resource-body">
+                    <span class="number">01 · SIMULACIÓN</span>
+                    <h3>Chemical Chaos</h3>
+                    <p>
+                        Recurso interactivo para explorar un sistema químico
+                        mediante una experiencia de simulación.
+                    </p>
+
+                    <div class="resource-meta">
+                        <span class="tag">Interactivo</span>
+                        <span class="tag">Simulación</span>
+                    </div>
+
+                    <a class="open"
+                       href="https://www.astrocade.com/games/chemical-chaos/01M1F98WM6VCCAF5GVDVX89D0D"
+                       target="_blank"
+                       rel="noopener">
+                        Abrir recurso <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="resource">
+                <div class="resource-band"></div>
+                <div class="resource-body">
+                    <span class="number">02 · SITIO WEB</span>
+                    <h3>Matemáticas Especiales II</h3>
+                    <p>
+                        Ruta de aprendizaje con contenidos, visualizaciones,
+                        laboratorios y ejercicios de análisis complejo.
+                    </p>
+
+                    <div class="resource-meta">
+                        <span class="tag">Web educativa</span>
+                        <span class="tag">Matemáticas</span>
+                    </div>
+
+                    <a class="open"
+                       href="https://dmr1811.github.io/matematicas-especiales-ii/index.html"
+                       target="_blank"
+                       rel="noopener">
+                        Abrir recurso <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="resource">
+                <div class="resource-band"></div>
+                <div class="resource-body">
+                    <span class="number">03 · NOTEBOOK</span>
+                    <h3>Google Colab</h3>
+                    <p>
+                        Notebook para trabajar de manera interactiva con
+                        código, cálculos y actividades computacionales.
+                    </p>
+
+                    <div class="resource-meta">
+                        <span class="tag">Computacional</span>
+                        <span class="tag">Python</span>
+                    </div>
+
+                    <a class="open"
+                       href="https://colab.research.google.com/drive/1DQYiysGucNVKg9DKVlW088_NzDaP0EWC"
+                       target="_blank"
+                       rel="noopener">
+                        Abrir recurso <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="info" id="registro">
+        <div>
+            <h2>Acceso institucional</h2>
+            <p>
+                El portal puede utilizar el correo institucional para registrar
+                el acceso a los recursos y generar estadísticas de uso.
+            </p>
+        </div>
+
+        <div class="login-box">
+            <h3>Ingresa con tu correo UNAL</h3>
+            <p>
+                Utiliza una cuenta que termine en <strong>@unal.edu.co</strong>.
+            </p>
+
+            <div class="email-row">
+                <input type="email"
+                       id="email"
+                       placeholder="nombre@unal.edu.co">
+                <button type="button" onclick="registrar()">Continuar</button>
+            </div>
+
+            <div id="mensaje" class="notice">
+                El registro real debe conectarse posteriormente con un servicio
+                de autenticación y almacenamiento.
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div>
+            <strong>Recursos de aprendizaje · Área</strong>
+        </div>
+        <p>Un espacio para explorar, practicar y aprender.</p>
+    </div>
+</footer>
+
+<script>
+function registrar(){
+    const email = document.getElementById("email").value.trim().toLowerCase();
+    const mensaje = document.getElementById("mensaje");
+
+    if(!email){
+        mensaje.textContent = "Ingresa tu correo institucional.";
+        return;
+    }
+
+    if(!email.endsWith("@unal.edu.co")){
+        mensaje.textContent = "Debes utilizar un correo que termine en @unal.edu.co.";
+        return;
+    }
+
+    mensaje.textContent =
+        "Correo válido. El siguiente paso es conectar este formulario con el sistema de registro.";
+}
+</script>
+
+</body>
+</html>
