@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso institucional · Recursos de aprendizaje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+ --vino:#5A2346;--morado:#76558F;--lila:#E8DFF0;--crema:#FBF7F1;
+ --coral:#D97865;--texto:#29232B;--gris:#706872;--blanco:#FFF;--borde:#DED5DE;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Ancizar Sans",sans-serif;color:var(--texto);background:var(--crema);
+line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+a{text-decoration:none;color:inherit}
+.topbar{background:var(--vino);color:#fff;padding:14px 6%;display:flex;
+justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.15rem;font-weight:800;letter-spacing:.3px}
+.top-note{font-size:.9rem;opacity:.85}
+.hero{flex:1;padding:75px 6% 80px;display:flex;align-items:center;
+background:radial-gradient(circle at 82% 18%,rgba(217,120,101,.28),transparent 24%),
+radial-gradient(circle at 12% 82%,rgba(118,85,143,.20),transparent 27%),var(--crema)}
+.hero-inner{width:100%;max-width:1180px;margin:auto;display:grid;
+grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.eyebrow{display:inline-block;color:var(--vino);background:var(--lila);padding:7px 14px;
+border-radius:30px;font-weight:700;margin-bottom:20px}
+h1{max-width:850px;font-size:clamp(3.2rem,7vw,6.3rem);line-height:.92;
+letter-spacing:-2px;color:var(--vino);margin-bottom:28px}
+.hero-text{max-width:680px;font-size:1.25rem;color:var(--gris)}
+.login-card{background:var(--blanco);border:1px solid var(--borde);border-radius:24px;
+padding:34px;box-shadow:0 18px 45px rgba(90,35,70,.10)}
+.login-card .number{color:var(--gris);font-size:.82rem;font-weight:800;letter-spacing:1px}
+.login-card h2{color:var(--vino);font-size:2rem;line-height:1.1;margin:10px 0 12px}
+.login-card p{color:var(--gris);margin-bottom:22px}
+.login-button{display:flex;width:100%;justify-content:center;align-items:center;
+background:var(--coral);color:#fff;padding:15px 20px;border-radius:10px;font-weight:800;
+font-size:1.05rem;transition:transform .2s ease,box-shadow .2s ease}
+.login-button:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(217,120,101,.25)}
+.institution-note{margin-top:15px;padding:12px 14px;background:var(--lila);
+border-radius:10px;color:var(--vino);font-size:.88rem}
+.steps{margin-top:24px;display:grid;gap:12px}
+.step{display:flex;gap:12px;align-items:flex-start}
+.step-number{flex:0 0 27px;height:27px;border-radius:50%;display:flex;
+justify-content:center;align-items:center;background:var(--vino);color:#fff;font-size:.8rem;font-weight:800}
+.step p{margin:0;font-size:.92rem}
+footer{background:var(--vino);color:#fff;padding:25px 6%}
+.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:25px}
+footer p{opacity:.82}
+@media(max-width:850px){.hero-inner{grid-template-columns:1fr;gap:40px}h1{letter-spacing:-1px}}
+@media(max-width:600px){.topbar,.footer-inner{align-items:flex-start;flex-direction:column}.hero{padding-top:55px}.login-card{padding:26px}}
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+ <a class="logo" href="index.html">RECURSOS · ÁREA</a>
+ <span class="top-note">Acceso institucional</span>
+</nav>
+
+<header class="hero">
+ <div class="hero-inner">
+  <div>
+   <span class="eyebrow">Portal de recursos de aprendizaje</span>
+   <h1>Aprender también es explorar.</h1>
+   <p class="hero-text">
+    Un espacio para reunir los recursos digitales elaborados por el área:
+    simulaciones, páginas interactivas, notebooks y otras herramientas
+    para acompañar el aprendizaje.
+   </p>
+  </div>
+
+  <div class="login-card">
+   <span class="number">01 · ACCESO</span>
+   <h2>Ingresa con tu cuenta UNAL</h2>
+   <p>
+    Antes de acceder a los recursos de aprendizaje debes realizar el registro
+    utilizando tu cuenta institucional de la Universidad Nacional de Colombia.
+   </p>
+
+   <a class="login-button"
+      href="https://forms.gle/SdQcuRhNMAX25cRL7"
+      target="_blank"
+      rel="noopener noreferrer">
+    Ingresar con cuenta UNAL →
+   </a>
+
+   <div class="institution-note">
+    <strong>Importante:</strong> el formulario está reservado para cuentas
+    institucionales <strong>@unal.edu.co</strong>.
+   </div>
+
+   <div class="steps">
+    <div class="step"><span class="step-number">1</span><p>Ingresa con tu cuenta institucional.</p></div>
+    <div class="step"><span class="step-number">2</span><p>Completa y envía el formulario de registro.</p></div>
+    <div class="step"><span class="step-number">3</span><p>Después del registro podrás continuar al portal de recursos.</p></div>
+   </div>
+  </div>
+ </div>
+</header>
+
+<footer>
+ <div class="footer-inner">
+  <strong>Recursos de aprendizaje · Área</strong>
+  <p>Un espacio para explorar, practicar y aprender.</p>
+ </div>
+</footer>
+
+</body>
+</html>
