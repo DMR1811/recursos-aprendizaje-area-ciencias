@@ -46,6 +46,19 @@ a{text-decoration:none;color:inherit}
     gap:20px;
 }
 
+
+.gea-brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+.gea-logo{
+    width:72px;
+    height:42px;
+    object-fit:contain;
+    display:block;
+}
+
 .logo{
     font-size:1.15rem;
     font-weight:800;
@@ -308,7 +321,10 @@ footer p{opacity:.82}
 <body>
 
 <nav class="topbar">
-    <a class="logo" href="index.html">RECURSOS · ÁREA</a>
+    <a class="gea-brand" href="index.html" aria-label="Recursos de aprendizaje · Área">
+    <img class="gea-logo" src="logo-gea-blanco.png" alt="Grupos de Estudio Autónomo">
+    <span class="logo">RECURSOS · ÁREA</span>
+</a>
 
     <div class="top-actions">
         <a class="top-link" href="index.html">← Volver al acceso</a>
